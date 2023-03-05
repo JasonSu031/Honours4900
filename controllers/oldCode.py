@@ -54,5 +54,5 @@ def addAnnotation():
                     row.append(json.loads(json.dumps(mapping))[3]["d"])
                     tsv_output.writerow(row)
 
-createUniqueList()
+#createUniqueList()
 #addAnnotation()
