@@ -1,0 +1,9 @@
+{"w": "FWD", "a": "LEFT", "s": "BACK", "d": "RIGHT",
+               "shift": "WALK", "ctrl_l": "CROUCH", "space": "JUMP",
+               "f": "INTRACT", "4": "OBJ",
+               "r": "RLD", "(0, -1)": "WPN_SWTCH", "(0, 1)": "WPN_SWTCH",
+               "!": "WPN_SWTCH",
+               "1": "WPN_SWTCH", "2": "WPN_SWTCH", "e": "WPN_SWTCH", "3": "KNIFE",
+               "q": "SKL", "c": "SKL", "h": "SKL", "x": "SKL",
+               "left": "SHOOT", "right": "AIM"
+              }
