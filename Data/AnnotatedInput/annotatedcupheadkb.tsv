@@ -1132,4 +1132,8 @@
 2023-04-13 12:31:01.857937	left	pressed	left
 2023-04-13 12:31:02.111777	left	released	left
 2023-04-13 12:31:02.438257	x	released	shoot
+2023-04-13 12:31:09.943641	alt_l	pressed	other
+2023-04-13 12:31:10.021597	tab	pressed	other
+2023-04-13 12:31:10.120192	tab	released	other
+2023-04-13 12:31:11.219767	alt_l	released	other
 2023-04-13 12:31:13.446816	delete	pressed	end
