@@ -1,0 +1,178 @@
+#lightblue {
+  background-color: #41BEE3;
+}
+
+#grey {
+  color: #EAEAEA;
+  text-shadow: 0.5px 0.5px #353AD1;
+}
+
+#moreRight {
+  margin-right: 50px;
+}
+
+.topSpace {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: grey;
+}
+
+.bgC {
+  background-color: #F9CF54;
+}
+
+#instructions {
+  height: 600px;
+  border-radius: 10px;
+}
+
+#halfHeight {
+  display: block;
+  height: 50%;
+}
+
+.fitToContainer {
+  height: 80%;
+  width: 75%;
+}
+
+.fitToContainer:hover {
+  height: 95%;
+  width: 85%;
+}
+
+.fitToContainer:hover #textOverImg {
+  padding: 40px;
+  opacity: 0.9;
+}
+
+#textOverImg {
+  visibility: visible;
+  opacity: 0.75;
+  padding: 35px;
+  border: solid;
+  border-color: grey;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  text-align: center;
+}
+
+.fitToContainer:hover #textOverImg2 {
+  padding: 40px;
+  opacity: 0.9;
+}
+
+#textOverImg2 {
+  visibility: visible;
+  opacity: 0.75;
+  padding: 35px;
+  border: solid;
+  border-color: grey;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  text-align: center;
+}
+
+.fitToContainer:hover #textOverImg3 {
+  padding: 40px;
+  opacity: 0.9;
+}
+
+#textOverImg3 {
+  visibility: visible;
+  opacity: 0.75;
+  padding: 35px;
+  border: solid;
+  border-color: grey;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  text-align: center;
+}
+
+
+.fitToContainer:hover #textOverImg4 {
+  padding: 40px;
+  opacity: 0.9;
+}
+
+#textOverImg4 {
+  visibility: visible;
+  opacity: 0.75;
+  padding: 35px;
+  border: solid;
+  border-color: grey;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  text-align: center;
+}
+
+#number {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-left: 25px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  height: 510px;
+  background-size: contain;
+
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.nav-tabs {
+  margin-bottom: 0;
+}
+
+.iconParent {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  height: 100%;
+  left: 7%;
+}
+
+.h40 {
+  height: 40%;
+}
+
+.dark {
+  color: black;
+}
+.noUnderline{
+  text-decoration: none;
+}
+.centerForm{
+  margin: 0 auto;
+  width: 250px;
+}
+
+.actMouse:hover{
+  cursor:pointer;
+}
