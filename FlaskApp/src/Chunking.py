@@ -27,7 +27,7 @@ def fillDf(dataFile):
     # df = pd.read_csv(iPath+dataFile, sep='\t', header = None, names = ['TS','elapsed', 'crouch', 'dash', 'end', 'jump', 'left', 'lock', 'options', 'right', 'shoot', 'super', 'up', 'annotate'])
     df = dataFile
     df.columns=['TS','elapsed', 'crouch', 'dash', 'end', 'jump', 'left', 'lock', 'options', 'right', 'shoot', 'super', 'up', 'annotate']
-    print(df)
+    # print(df)
     return df.fillna(method="ffill")                                                              #fill all empty vlues in dataframe with previous value
 
 # In[56]:
@@ -50,7 +50,7 @@ def splitSeq(dataFile, seqLen):
         z = inputArr[i:i+seqLen].tolist()                     #convert these intervals to a list
         window.append(z)
     window = np.array(window)                                 #convert window to numpyarray
-    print(type(window))
+    # print(type(window))
     return window, annotate
 
 # In[58]:

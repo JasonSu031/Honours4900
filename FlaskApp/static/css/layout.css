@@ -158,6 +158,16 @@
   left: 7%;
 }
 
+.plot {
+  display:block;
+  position: absolute;
+  height: 100%;
+}
+/* .enlarge:hover{
+  border-width:0;
+  transform: scale(1.8);
+  z-index: 2;
+} */
 .h40 {
   height: 40%;
 }
@@ -165,14 +175,28 @@
 .dark {
   color: black;
 }
-.noUnderline{
+
+.noUnderline {
   text-decoration: none;
 }
-.centerForm{
+
+.centerForm {
   margin: 0 auto;
   width: 250px;
 }
 
-.actMouse:hover{
-  cursor:pointer;
+.actMouse:hover {
+  cursor: pointer;
+}
+
+.error {
+  background: red;
+}
+
+.success {
+  background: #74E83A;
+}
+
+.closeBtn:hover {
+  cursor: pointer;
 }

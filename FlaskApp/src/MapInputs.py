@@ -78,7 +78,7 @@ def annotateData(iPath,oPath,dataFile):                                         
     df2.insert(1, "col1",cleanedKey)                                                #insert the clenaed inputs
     df2 = df2.drop("key_x", axis = 1)                                               #drop old key column
     df2 = df2.drop(df2[df2.action =="other"].index)                                 #drop all rows with other keys
-    print(df2)
+    # print(df2)
     df2.to_csv(os.path.join(oPath,dataFile),sep = '\t', header=None, index = False)
 
 
@@ -91,7 +91,7 @@ def dataToAnnotate(iPath,oPath,dataFile):
     df = df.apply(lambda x:datetime.datetime.strptime(x, '%Y-%m-%d %H:%M:%S.%f'))                                 #change timestamp string to datetime
     elapsed = addInterval(df)                                                                                     #get the time elapsed data column
     toAnnotate = pd.concat([df, elapsed], axis = 1)                                                               #add elapsed data to original dataframe
-    print(toAnnotate)
+    # print(toAnnotate)
     toAnnotate.to_csv(os.path.join(oPath,dataFile), sep = '\t', header = None, index = False)  #save file with actions performed data
 
 

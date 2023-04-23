@@ -30,7 +30,7 @@ def concatAnnotation(cPath, dataFile):
 
 def binaryVectorize(iPath, cPath, dataFile, resample):
     df = pd.read_csv(os.path.join(iPath,dataFile), sep='\t', header = None, names = ["TS", "Key","Event", "Action"])
-    print(df.Event)
+    # print(df.Event)
     df.Event = df.Event.map(lambda x:x.lower())                                                 #make the values in the event column lowercase
     df = df.assign(Event= df.Event.map({"pressed":1, "released":0}))                            #replace the event values from pressed and released to 0 and 1
     pivot = df.pivot(columns=["Action"], values = ["Event"]).fillna(0).astype(int)              #pivot the table based off of Actions and make empty values 0
@@ -47,7 +47,7 @@ def binaryVectorize(iPath, cPath, dataFile, resample):
     for columns in states:                                                                      #if the values in the pivot table are decimal values, change them to int
         if(type(states[columns][0])==type(np.float64(2))):                                  
             states[columns] = states[columns].astype(int)
-    print(states)
+    # print(states)
     # states.to_csv("../Data/ActionState/states"+dataFile,sep = '\t', header=None, index = False)
     return states
 

@@ -14,13 +14,17 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <title>Cuphead User Engagement</title>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <span class="{{ category }}">
-        {{ messages[0] }}
-    </span>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+    <div class= "container-fluid {{category}}">
+        <div class = "row py-2">
+            <div class = "col"></div>
+            <div class = "col d-flex justify-content-center fw-bold">{{ messages[0][1] }}</div>
+            <div class = "col d-flex justify-content-end fw-bold closeBtn" onclick = "hide(this)">X &nbsp; &nbsp;</div>
+        </div>
+    </div>
     
-    {% endif %}
+    {% endfor %}
     {% endwith %}
 </head>
 
@@ -37,13 +41,10 @@
             <div class="pe-4">
                 <ul class="navbar-nav d-flex flex-row" id="moreRight">
                     <li class="nav-item p-2">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item p-2">
                         <a class="nav-link " href="/upload">Upload</a>
-                    </li>
-                    <li class="nav-item p-2">
-                        <a class="nav-link " href="/predict">Predict</a>
                     </li>
                 </ul>
             </div>
@@ -64,4 +65,9 @@
         crossorigin="anonymous"></script>
 </body>
 
+<script>
+    function hide(msg){
+        $(msg).parent().remove()
+    }
+</script>
 </html>

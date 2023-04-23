@@ -5,10 +5,12 @@
 <div class="container px-5">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="s1-tab" data-bs-toggle="tab" data-bs-target="#step1" type="button"
-                role="tab" aria-controls="s1-tab" aria-selected="true">
-                <a href="{{url_for('step1')}}" class = "noUnderline">Step 1</a>
-            </button>
+            <a href="{{url_for('step1')}}" class="noUnderline">
+                <button class="nav-link" id="s1-tab" data-bs-toggle="tab" type="button"
+                    role="tab" aria-controls="s1-tab" aria-selected="true">
+                    Step 1
+                </button>
+            </a>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="s2-tab" data-bs-toggle="tab" data-bs-target="#step2" type="button"
@@ -17,27 +19,22 @@
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link disabled" id="s3-tab" data-bs-toggle="tab" data-bs-target="#step3" type="button"
+            <button class="nav-link disabled" id="s3-tab" data-bs-toggle="tab" type="button"
                 role="tab" aria-controls="s3-tab" aria-selected="false">
                 Step 3</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link disabled" id="s4-tab" data-bs-toggle="tab" data-bs-target="#step4" type="button"
+            <button class="nav-link disabled" id="s4-tab" data-bs-toggle="tab" type="button"
                 role="tab" aria-controls="s4-tab" aria-selected="false">
                 Step 4</button>
         </li>
     </ul>
     <div class="tab-content position-relative" id="myTabContent">
 
-        <!-- step 1 -->
-        <div class="tab-pane fade show position-relative h-100" id="step1" role="tabpanel"
-            aria-labelledby="s1-tab">
-            <div class="container position-relative h-100">
-                
-            </div>
-        </div>
+        
         <!-- step 2 -->
-        <div class="tab-pane fade show active position-relative h-100" id="step2" role="tabpanel" aria-labelledby="s2-tab">
+        <div class="tab-pane fade show active position-relative h-100" id="step2" role="tabpanel"
+            aria-labelledby="s2-tab">
             <div class="container position-relative h-100">
                 <div class="row justify-content-center h-10 position-relative">
                     <div class="col d-flex justify-content-center p-2">
@@ -45,19 +42,27 @@
                     </div>
                 </div>
                 <div class="row justify-content-center h-50 ">
-                    <div class="col "></div>
                     <div class="col d-flex justify-content-center iconParent">
-                        <img class="icon" src="{{url_for('static', filename='/images/up.png')}}" />
+                        <img class="icon border" src="{{url_for('static', filename='/images/py.png')}}" />
                     </div>
-                    <div class="col "></div>
+                    <div class="col d-flex justify-content-center iconParent">
+                        <img class="icon border" src="{{url_for('static', filename='/images/cuphead.png')}}" />
+                    </div>
+                    <div class="col d-flex justify-content-center iconParent">
+                        <img class="icon border" src="{{url_for('static', filename='/images/up.png')}}" />
+                    </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col "></div>
+                <div class="row ">
                     <div class="col d-flex justify-content-center mt-4">
-                        <p class="text-center">Run the python script to record inputs</br>
-                            Record gameplay with recording software </p>
+                        1. Run the Python script.
                     </div>
-                    <div class="col "></div>
+                    <div class="col d-flex justify-content-center mt-4">
+                        2. Record your gameplay
+                    </div>
+                    <div class="col d-flex justify-content-center mt-4">
+                        <p class = "text-center">3. Press delete key to stop script.</br>
+                        Upload new tsv file.</p>
+                    </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col "></div>
@@ -76,7 +81,7 @@
                     <div class="col d-flex justify-content-center">
 
                     </div>
-                    <div class="col d-flex justify-content-end" onclick = "uploadFile()">
+                    <div class="col d-flex justify-content-end" onclick="uploadFile()">
                         <a class="dark actMouse">Next Step ></a>
                     </div>
                 </div>
@@ -88,16 +93,13 @@
             </div>
 
         </div>
+
         
-        <!-- step 3 -->
-        <div class="tab-pane fade" id="step3" role="tabpanel" aria-labelledby="contact-tab">
-            
-        </div>
     </div>
     <script>
-       function uploadFile(){
+        function uploadFile() {
             $('#submit')[0].click()
-       }
+        }
     </script>
 </div>
 {%endblock%}

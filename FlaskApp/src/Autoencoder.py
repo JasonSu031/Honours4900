@@ -17,7 +17,7 @@ import tensorflow as tf
 
 
 
-def createAuto(x, y):
+def createAuto(x):
     seq = x.shape[1]
     features = x.shape[2]
     model = Sequential()
@@ -33,7 +33,7 @@ def createAuto(x, y):
     print(h)
 
     encoder = Model(inputs=model.inputs, outputs=model.layers[0].output)           #create encoder
-    encoder.save("cupheadEnc.h5")
+    # encoder.save("cupheadEnc.h5")
     return encoder
 
 # a = np.load("../Data/Chunkized/cupheadkb.npz", allow_pickle=True)["x"]                #take the keyboard inputs displayed as 0 and 1
@@ -54,28 +54,6 @@ def createAuto(x, y):
 # model.compile(optimizer='adam', loss='mse')           #compile model
 # # Print model summary
 # model.summary()
-
-
-# In[81]:
-
-
-# es = EarlyStopping(patience=10, monitor="loss")           #using early stop run the autoencoder epoch number of times
-# h = model.fit(a, a, epochs=150, callbacks=[es])
-
-
-# In[82]:
-
-
-
-
-
-# In[83]:
-
-
-
-# plot_loss(h)
-
-# In[84]:
 
 
 # encoder = Model(inputs=model.inputs, outputs=model.layers[0].output)           #create encoder

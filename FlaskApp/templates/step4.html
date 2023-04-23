@@ -5,22 +5,28 @@
 <div class="container px-5">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="s1-tab" data-bs-toggle="tab" data-bs-target="#step1" type="button" role="tab"
-                aria-controls="s1-tab" aria-selected="true">
-                <a href="{{url_for('step1')}}" class="noUnderline">Step 1</a>
-            </button>
+            <a href="{{url_for('step1')}}" class="noUnderline">
+                <button class="nav-link" id="s1-tab" data-bs-toggle="tab" type="button" role="tab"
+                    aria-controls="s1-tab" aria-selected="true">
+                    Step 1
+                </button>
+            </a>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="s2-tab" data-bs-toggle="tab" data-bs-target="#step2" type="button" role="tab"
-                aria-controls="s2-tab" aria-selected="false">
-                <a href="{{url_for('step2')}}" class="noUnderline">Step 2</a>
-            </button>
+            <a href="{{url_for('step2')}}" class="noUnderline">
+                <button class="nav-link" id="s2-tab" data-bs-toggle="tab" type="button" role="tab"
+                    aria-controls="s2-tab" aria-selected="false">
+                    Step 2
+                </button>
+            </a>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="s3-tab" data-bs-toggle="tab" data-bs-target="#step3" type="button" role="tab"
-                aria-controls="s3-tab" aria-selected="false">
-                <a href="{{url_for('step3')}}" class="noUnderline">Step 3</a>
-            </button>
+            <a href="{{url_for('step3')}}" class="noUnderline">
+                <button class="nav-link" id="s3-tab" data-bs-toggle="tab" type="button" role="tab"
+                    aria-controls="s3-tab" aria-selected="false">
+                    Step 3
+                </button>
+            </a>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="s4-tab" data-bs-toggle="tab" data-bs-target="#step4" type="button"
@@ -28,29 +34,6 @@
         </li>
     </ul>
     <div class="tab-content position-relative" id="myTabContent">
-
-        <!-- step 1 -->
-        <div class="tab-pane fade show position-relative h-100" id="step1" role="tabpanel" aria-labelledby="s1-tab">
-            <div class="container position-relative h-100">
-
-            </div>
-        </div>
-        <!-- step 2 -->
-        <div class="tab-pane fade show position-relative h-100" id="step2" role="tabpanel" aria-labelledby="s2-tab">
-            <div class="container position-relative h-100">
-
-            </div>
-
-        </div>
-
-        <!-- step 3 -->
-        <div class="tab-pane fade show position-relative h-100" id="step4" role="tabpanel"
-            aria-labelledby="s4-tab">
-            <div class="container position-relative h-100">
-
-            </div>
-
-        </div>
 
         <!-- step 4 -->
         <div class="tab-pane fade show active position-relative h-100" id="step4" role="tabpanel"
@@ -62,23 +45,35 @@
                     </div>
                 </div>
                 <div class="row justify-content-center h-75 ">
-                    <div class = "col-1"></div>
-                    <div class="col-5 mt-5">
-                        <form class="" action="http://localhost:5000/createModel" method="POST" enctype="multipart/form-data">
-                            <h6 class = "py-2">Change Parameters</h6>
+                    <div class="col-1"></div>
+                    <div class="col-5 mt-1">
+                        <form class="" action="http://localhost:5000/createModel" method="POST"
+                            enctype="multipart/form-data">
+                            <h6 class="py-1">Change Parameters</h6>
                             Enter time interval of each frame: &nbsp;</br>
-                            <input class = "mb-3 mt-2" type = "number" name = "resample"> ms</br>
+                            <input class="mb-3 mt-2" type="number" name="resample" value="9000"> ms</br>
                             Enter number of frames to combine at once:
-                            <input class = "mb-3 mt-2" type="number" name = "frames"> frames</br>
-                            <input class = "mt-1" type = "submit" value = "Apply">
+                            <input class="mb-3 mt-2" type="number" name="frames" value="4"> frames</br>
+                            Enter custom number of clusters (0 for default):</br>
+                            <input class="mb-3 mt-2" type="number" name="clusters" value="3"> clusters</br>
+
+                            <input class="mt-2" type="submit" value="Apply">
                         </form>
                     </div>
-                    <div class = "col"></div>
-                    <div class="col-5 d-flex justify-content-center border iconParent">
-                        <img class="icon" src="{{url_for('static', filename='/images/plot.png')}}">
+                    <div class="col-5 d-flex border justify-content-center iconParent enlarge">
+                        <img class="plot" src="{{url_for('static', filename='/images/plot.png')}}"
+                            onerror="this.style.display='none'">
+
                     </div>
-                    <div class = "col"></div>
+                    <div class="col"></div>
                 </div>
+                <div class="row d-flex justify-content-end">
+                    <div class = "col"></div>
+                    <div class = "col d-flex justify-content-center me-5">
+                        <a href = "{{url_for('static', filename='/images/plot.png')}}" target="_blank">Click here for larger image</a>
+                    </div>
+                </div>
+            
             </div>
 
         </div>
